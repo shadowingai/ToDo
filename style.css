@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+* {
+    font-family: calibri;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F8F8F8;
+    position: relative;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-color: #FF7070;
+    top: -200px;
+    right: -200px;
+}
+
+
+.main::after {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-color: #525666;
+    bottom: -300px;
+    left: -300px;
+}
+
+.wrapper {
+    max-width: 700px;
+    margin: auto;
+    padding: 70px 0;
+}
+
+.title .good-evening {
+    font-size: 26px;
+    color: #DCDCDC;
+}
+
+
+.title .my-todo {
+    font-size: 56px;
+    color: #FF7070;
+    font-weight: bold;
+}
+
+.todo-list {
+    width: 100%;
+    max-height: 600px;
+    background-color: white;
+    border-radius: 25px;
+    margin-top: 50px;
+    position: relative;
+    z-index: 2;
+    overflow-y: auto;
+}
+
+.todo-list .insert {
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    border-bottom: solid 1px #ECECEC;
+}
+
+.todo-list .insert input{
+    width: 80%;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    padding: 4px 20px;
+    background: unset;
+    font-size: 22px;
+    border-radius: 25px;
+}
+
+.todo-list .insert input::placeholder {
+    color: #DCDCDC;
+}
+
+.insert-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta {
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 100%;
+    position: relative;
+    text-align: center;
+    z-index: 9999;
+    margin: 12px 25px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.cta:hover {
+    opacity: 0.7;
+}
+
+#insert-icon {
+    padding-top: 9px;
+    transition: 0.5s;
+    width: 15px;
+}
+
+.todo-item{
+    width: 100%;
+    background-color: unset;
+}
+
+
+input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    appearance: none;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background: #fff;
+    position: relative;
+    margin-right: 10px;
+  }
+  
+  input[type="checkbox"]:checked {
+    border: 2px solid #000;
+    background: #000;
+  }
+  
+  input[type="checkbox"]:checked:before, input[type="checkbox"]:checked:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: #fff;
+  }
+    
+  input[type="checkbox"]:checked:before {
+    width: 8px;
+    top: 15px;
+    left: 6px;
+    transform: rotate(44deg);
+  }
+  
+  input[type="checkbox"]:checked:after {
+    width: 14px;
+    top: 12px;
+    left: 9px;
+    transform: rotate(-55deg);
+  }
+  
+  input[type="checkbox"]:focus {
+    outline: none;
+  }  
+
+.todo-item {
+    height: 80px;
+    border-bottom: solid 1px #EBEBEB;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.todo-item:hover {
+    background-color: #525666;
+    color: white;
+}
+
+.todo-item:hover input[type="checkbox"]:checked {
+    border: 2px solid #fff;
+    background-color: unset;
+}
+
+.todo-item:hover input[type="checkbox"] {
+    border: 2px solid #fff;
+    background-color: unset;
+}
+
+.todo-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.created-at {
+    font-size: 16px;
+    color: #D8D8D8;
+}
+
+.todo-item-left{
+    display: flex;
+    width: fit-content;
+    height: 80px;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: solid 1px white;
+}
+
+.todo-item-right{
+    display: flex;
+    width: fit-content;
+    height: 80px;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: solid 1px white;
+}
+
+.todo-item-titles{
+    margin-left: 12px;
+}
+
+.todo-icons img {
+    margin: 0 10px;
+}
+
+#edit, #delete{
+    background-color: unset;
+    border: 0;
+    cursor: pointer;
+}
+
+#modal {
+    max-width: 700px;
+    height: 350px;
+    border-radius: 25px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 9;
+}
+
+#overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(116, 119, 132, 0.8);
+    position: absolute;
+    z-index: 9;
+    display: none;
+}
+
+.close{
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 100%;
+    text-align: center;
+    margin: -100px auto 0;
+    cursor: pointer;
+}
+
+
+.close img{
+    padding-top: 12px;
+}
+
+#msg {
+    margin: 150px 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+.btn {
+    width: 155px;
+    height: 45px;
+    border-radius: 35px;
+    border: 0;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.btn.delete {
+    background-color: #FF7070;
+    color: white;
+}
+
+.btn.cancel {
+    background-color: #D8D8D8;
+    color: #656565;
+}
+
+.buttons {
+    text-align: center;
+    margin: -50px auto;
+}
+
+.modalContent{
+    position: relative;
+}
+
+.modalVideo{
+    position: absolute; 
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    height: 350px;
+    width: auto; 
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 25px;
+}

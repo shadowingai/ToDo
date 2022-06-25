@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ToDo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div id="overlay">
+            <div id="modal">
+                <div class="close" onclick="closeModal()">
+                    <img src="http://cdn.onlinewebfonts.com/svg/img_238850.png" width="20px" alt="">
+                </div>
+                <div id="msg"></div>
+                <div id="modalContent">
+                    
+                </div>
+
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="title">
+                <div class="good-evening">Good Evening</div>
+                <div class="my-todo">My ToDo</div>
+            </div>
+            <div class="todo-list">
+                <div class="insert">
+                    <div class="insert-wrapper">
+                        <input type="text" id="insert" placeholder="Type something">
+                        <div class="cta">
+                            <img src="images/white-plus.jpg" id="insert-icon" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="list-items" id="todos"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>    
+    <script src="script.js"></script>
+</body>
+</html>
